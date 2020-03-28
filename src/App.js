@@ -14,7 +14,6 @@ class App extends Component{
       isLoaded: false,
       items:[],
       currentItem: {text:"первое дело", inner_key:"firstItem"}
-      
     }
   }
   componentDidMount() {
@@ -73,7 +72,13 @@ class App extends Component{
     this.setState({
       items:filterItems
     })
-  }
+
+    fetch(`http://localhost:5003/deals/${inner_key}`, {
+        method: 'DELETE',
+        body: inner_key
+    }).then(response => response.json())
+}
+
 
   render(){
     const { error, isLoaded } = this.state;
