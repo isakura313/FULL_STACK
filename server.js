@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 
 
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3000;
 
 // здесь у нас происходит импорт пакетов и определяется порт нашего сервера
 
@@ -42,7 +42,7 @@ require("./app/routes/deals.routes.js")(app);
 
 
 // set port, listen for requests
-const PORT = process.env.PORT || 80;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
